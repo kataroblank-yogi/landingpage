@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้ากลุ่ม VIP ทีเด็ดฟุตบอล</title>
+
+    <!-- ======================================================= -->
+    <!-- 🟢 วางโค้ด META PIXEL BASE CODE ของคุณตรงนี้ 🟢 -->
+    <!-- ======================================================= -->
+    <!-- 
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'ใส่_PIXEL_ID_ของคุณตรงนี้'); 
+      fbq('track', 'PageView');
+    </script>
+    -->
+    <!-- ======================================================= -->
+
+    <style>
+        /* รีเซ็ตค่าขอบและระยะห่าง */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0b0f19; /* สีพื้นหลังโทนเข้ม หรูหรา */
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* โครงสร้างหน้าจอมือถือความกว้างไม่เกิน 480px */
+        .container {
+            max-width: 480px;
+            width: 100%;
+            background-color: #111827;
+            display: flex;
+            flex-direction: column;
+            /* ป้องกันการเกิดช่องว่างสีขาวระหว่างรูปภาพ */
+            font-size: 0;
+            line-height: 0;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* แสดงผลภาพให้เต็มความกว้างและคมชัดแบบ Crisp-edges */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            outline: none;
+            /* คุณสมบัติบังคับเรนเดอร์ขอบภาพให้คมชัด ไม่เบลอ */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        /* ตกแต่งรูปที่ 3 ให้เป็นปุ่มที่ตอบสนองการกด */
+        .image-button {
+            display: block;
+            text-decoration: none;
+            outline: none;
+            transition: transform 0.15s ease, filter 0.15s ease;
+            cursor: pointer;
+        }
+
+        .image-button:hover {
+            filter: brightness(1.08);
+        }
+
+        .image-button:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- รูปที่ 1 -->
+        <img src="https://i.postimg.cc/6q7YJDgb/ph-ses'.jpg" alt="ส่วนที่ 1 - ทีเด็ดฟุตบอล VIP">
+
+        <!-- รูปที่ 2 -->
+        <img src="https://i.postimg.cc/nLzmPq6d/photo-2026-07-04-21-36-33.jpg" alt="ส่วนที่ 2 - รายละเอียดกลุ่ม">
+
+        <!-- รูปที่ 3 (ปุ่มกดแบบภาพเคลื่อนไหว GIF -> ไปที่ LINE) -->
+        <a href="https://lin.ee/UxkwS5f" target="_blank" rel="noopener" class="image-button" onclick="trackLeadEvent()">
+            <img src="https://i.postimg.cc/KjZx0DWj/sm-khrr-bkh-xm-l.gif" alt="ปุ่มสมัครรับข้อมูล">
+        </a>
+
+        <!-- รูปที่ 4 -->
+        <img src="https://i.postimg.cc/PxJCShvc/po-s-te-xr-se-xb-xlth-mchat-laea-phr-me-yr-l-k.png" alt="ส่วนที่ 4 - ผลงานและสถิติ">
+
+        <!-- รูปที่ 5 -->
+        <img src="https://i.postimg.cc/MHWq9mL7/say-khe-yw.png" alt="ส่วนที่ 5 - เข้าร่วมกลุ่ม VIP">
+
+    </div>
+
+    <script>
+        // ฟังก์ชันสำหรับส่ง Event 'Lead' ไปยัง Meta Pixel เมื่อมีการกดปุ่ม
+        function trackLeadEvent() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+                console.log("ส่งข้อมูล Meta Pixel Event: Lead เรียบร้อยแล้ว");
+            }
+        }
+    </script>
+
+</body>
+</html>
